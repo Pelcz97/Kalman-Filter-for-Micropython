@@ -1,0 +1,7 @@
+kf = Kalman_Filter()
+kf.configure("Parameters/kf_parameters_test.json")
+
+values = [np.array([0.390]),np.array([0.500]),np.array([0.480]),np.array([0.290]),np.array([0.250]),np.array([0.320]),np.array([0.340]),np.array([0.480]),np.array([0.410]),np.array([0.450]), np.array([10])]
+for value in values:
+    x = kf.update(value)
+    print(x)

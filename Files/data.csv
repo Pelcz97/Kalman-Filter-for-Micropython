@@ -1,0 +1,4 @@
+x0;rand_offset;result
+MicroPython: v1.13-r22 OpenMV: v3.8.0 HAL: v1.9.0 BOARD: OPENMV4-STM32H743
+Type "help()" for more information.
+>>> GO

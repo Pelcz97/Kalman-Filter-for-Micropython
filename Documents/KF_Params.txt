@@ -1,0 +1,20 @@
+# Kalman filter params:
+  # dt="time between two updates"
+  # n="number of states"
+  # m="number of measurements"
+  # A="System dynamics matrix: nxn"
+  # At="System dynamics matrix (dynamic part): nxn"
+  # C="Output matrix: mxn"
+  # Q="Process noise covariance: nxn"
+  # Q_coeff="coefficients of the dynamic part of Q"
+  # Q_exponent="exponents of the time differnce"
+  # Q_variance="variance of the process noise"
+  # R="Measurement noise covariance: mxm"
+  # P="Estimate error covariance: nxn"
+  # x0="start state vector"
+  
+  
+  # x0 can be empty
+  # if At is empty or not valid -> update with delta_t is not available
+  # if Q_coeff is empty or not valid -> Q_exponent and Q_variance are not considered and 
+  #     update of the Q matrix is not available

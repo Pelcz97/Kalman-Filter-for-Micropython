@@ -1,0 +1,314 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="de" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Dokumentation zur Micropython Kalman Filter Library &mdash; Kalman Filter 09.02.2021 Dokumentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/translations.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Stichwortverzeichnis" href="genindex.html" />
+    <link rel="search" title="Suche" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="#" class="icon icon-home"> Kalman Filter
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">Dokumentation zur Micropython Kalman Filter Library</a></li>
+</ul>
+</div>
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">Kalman Filter</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="#" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Dokumentation zur Micropython Kalman Filter Library</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-Kalman_Filter.Kalman_Filter">
+<span id="dokumentation-zur-micropython-kalman-filter-library"></span><h1>Dokumentation zur Micropython Kalman Filter Library<a class="headerlink" href="#module-Kalman_Filter.Kalman_Filter" title="Link zu dieser Überschrift">¶</a></h1>
+<dl class="py class">
+<dt id="Kalman_Filter.Kalman_Filter.Kalman_Filter">
+<em class="property">class </em><code class="sig-prename descclassname">Kalman_Filter.Kalman_Filter.</code><code class="sig-name descname">Kalman_Filter</code><a class="headerlink" href="#Kalman_Filter.Kalman_Filter.Kalman_Filter" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Die Klasse des Kalman Filters (KF)</p>
+<dl class="py method">
+<dt id="Kalman_Filter.Kalman_Filter.Kalman_Filter.computePrediction">
+<code class="sig-name descname">computePrediction</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">delta_t</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#Kalman_Filter.Kalman_Filter.Kalman_Filter.computePrediction" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Funktion um eine Vorhersage des Kalman Filters zu generieren. Dabei wird die P-Matrix nicht geupdated</p>
+<p>Parameters:</p>
+<p>delta_t: Optionaler Parameter für die Zeitdauer zwischen 2 Funktionsaufrufen. Falls delta_t im Methodenkopf nicht genutzt wird, wird dt aus der Konfigurationsdatei genutzt.</p>
+<p>Returns:</p>
+<p>Der nächste erwartete Zustand.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="Kalman_Filter.Kalman_Filter.Kalman_Filter.configure">
+<code class="sig-name descname">configure</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">path_to_config_file</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">x0</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#Kalman_Filter.Kalman_Filter.Kalman_Filter.configure" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Funktion um die Konfiguration des Kalman Filters vorzunehmen.</p>
+<p>Hier werden alle wichtigen Parameter gesetzt. Daher kann der Kalman Filter nicht ohne die Konfiguration gestarted werden!</p>
+<p>Parameters:</p>
+<p>path_to_config_file: String der den Pfad zur Konfigurationsdatei angibt. Die Datei muss eine .json Datei sein</p>
+<p>x0: Initialer Zustandsvektor des Kalman Filters. x0 muss vom Typ ulab.ndarray() sein</p>
+<p>Folgende Parameter können/müssen in der .json Datei gesetzt werden</p>
+<p>dt: Zeiteinheit zwischen 2 KF Updates. Als Default Wert empfielt sich eine 1</p>
+<p>n: Dimension des Zustandraums. Muss ein Integer sein</p>
+<p>m: Dimension des Beobachtungs- oder Messraums. Muss ein Integer sein</p>
+<p>A: Koeffizienten der Zustandsübergangsmatrix. Muss eine nXn Matrix sein</p>
+<p>At: Optionale Matrix für die Zeitabhängigkeiten in der Zustandsübergangsmatrix. Muss eine nXn Matrix sein.</p>
+<p>C: Beobachtungsmatrix für die Überführung vom Zustand zur Messung. Muss eine mxn Matrix sein.</p>
+<p>Q: Zustandskovarianzmatrix für die Modelierung der Zustandsunsicherheit. Dieser Teil ist Zeitunabhängig. Muss eine nxn Matrix sein.</p>
+<p>Q_coeff: Matrix für Koeffizienten der zeitabhängigen Anteile in der Zustandskovarianzmatrix. Muss eine nxn Matrix sein.</p>
+<p>Q_variance: Skalarer Wert für die Varianz der Zustandsunsicherheit. Wird im Programm mit der Zustandskovarianzmatrix multipliziert. Muss ein Skalar sein.</p>
+<p>Q_exponent: Matrix für die Exponenten von t für die Zustandsunsicherheit. Muss eine nxn Matrix sein.</p>
+<p>R: Sensorkovarianzmatrix für die Modelierung des Sensorrauschens. Muss eine mxm Matrix sein.</p>
+<p>P: Fehlermatrix. Sollte als Identitätsmatrix oder Nullmatrix gewählt werden und hält die aktuelle Fehlermatrix. Wird bei Berechnungen überschrieben und ist daher ein optionaler Parameter. Muss beim Setzen aber eine nxn Matrix sein.</p>
+<p>P0: Initialer Wert der Fehlermatrix, falls man diese zurücksetzen möchte. Ist ein optionaler Parameter, muss aber beim Setzen eine nxn Matrix sein.</p>
+<p>x0: Anfangszustand für den Kalman Filter. Wird der x0 Wert des Methodenkopfes nicht genutzt muss dieser in der .json Datei gesetzt werden.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="Kalman_Filter.Kalman_Filter.Kalman_Filter.factorial">
+<code class="sig-name descname">factorial</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span><span class="p">:</span> <span class="n">int</span></em><span class="sig-paren">)</span><a class="headerlink" href="#Kalman_Filter.Kalman_Filter.Kalman_Filter.factorial" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Private Funktion um die Fakultät auszurechnen. Sollte eigentlich nicht benutzt werden</p>
+<p>Parameters:</p>
+<p>x: Integer Wert, dessen Fakultät ausgerechnet werden soll</p>
+<p>Returns:</p>
+<p>int: x! wird zurückgegeben</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="Kalman_Filter.Kalman_Filter.Kalman_Filter.getCurrentState">
+<code class="sig-name descname">getCurrentState</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Kalman_Filter.Kalman_Filter.Kalman_Filter.getCurrentState" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Funktion für das Rücksetzen der Fehlermatrix und des geschätzten Zustandes.</p>
+<p>Diese Funktion kann genutzt werden, falls der Kalman Filter wegen schlechten Eingabewerten, einer ungenauen Systemgleichung o.ä. von der gewünschten Lösung divergiert.</p>
+<p>Returns:</p>
+<p>Den aktuellen Zustand</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="Kalman_Filter.Kalman_Filter.Kalman_Filter.getErrorCovarianceMatrix">
+<code class="sig-name descname">getErrorCovarianceMatrix</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Kalman_Filter.Kalman_Filter.Kalman_Filter.getErrorCovarianceMatrix" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Getter Funktion für die Fehlermatrix.</p>
+<p>Returns:</p>
+<p>Die P Matrix</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="Kalman_Filter.Kalman_Filter.Kalman_Filter.likelihood">
+<code class="sig-name descname">likelihood</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">data_in</span></em><span class="sig-paren">)</span><a class="headerlink" href="#Kalman_Filter.Kalman_Filter.Kalman_Filter.likelihood" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Funktion um die Likelihood für eine Messung zu berechnen.</p>
+<p>Parameters:</p>
+<p>data_in: Messung deren Likelihood berechnet werden soll.</p>
+<p>Returns:</p>
+<p>Likelihood der gegebenen Messung</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="Kalman_Filter.Kalman_Filter.Kalman_Filter.predict">
+<code class="sig-name descname">predict</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Kalman_Filter.Kalman_Filter.Kalman_Filter.predict" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Funktion um eine Vorhersage des Kalman Filters zu generieren. Dabei wird die P-Matrix geupdated</p>
+<p>Parameters:</p>
+<p>Returns:</p>
+<p>Der nächste erwartete Zustand.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="Kalman_Filter.Kalman_Filter.Kalman_Filter.resetErrorCovAndState">
+<code class="sig-name descname">resetErrorCovAndState</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Kalman_Filter.Kalman_Filter.Kalman_Filter.resetErrorCovAndState" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Funktion für das Rücksetzen der Fehlermatrix und des geschätzten Zustandes.</p>
+<p>Diese Funktion kann genutzt werden, falls der Kalman Filter wegen schlechten Eingabewerten, einer ungenauen Systemgleichung o.ä. von der gewünschten Lösung divergiert.</p>
+<p>Parameters:</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="Kalman_Filter.Kalman_Filter.Kalman_Filter.update">
+<code class="sig-name descname">update</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">data_in</span></em>, <em class="sig-param"><span class="n">delta_t</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">update_Q_Matrix</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">R_loc</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#Kalman_Filter.Kalman_Filter.Kalman_Filter.update" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Funktion für einen Update-Schritt des Kalman Filters. In dieser Funktion wird sowohl die A-, Q-, P- und die Gatingmatrix und der Zustand x_hat geupdated.</p>
+<p>Parameters:</p>
+<p>data_in: Aktuelle Messung. Muss ein mx1 Vektor sein.</p>
+<p>delta_t: Optionaler Parameter für die vergangene Zeit zwischen dem letzten Methodenaufruf. Falls dieser Wert nicht genutzt wird, wird stattdessen der dt Wert aus der Konfigurationsdatei verwendet.</p>
+<p>update_Q_Matrix: Optionaler Parameter für das Überschreiben der Q Matrix.</p>
+<p>R_Loc: Optionaler Parameter für das Setzen der R Matrix. Dieser Parameter sollte genutzt werden, falls die R Matrix nicht konstant ist. Ansonsten sollte die R Matrix in der Konfigurationsdatei gesetzt werden.</p>
+<p>Returns:</p>
+<p>Der gefilterte geschätzte Zustand</p>
+</dd></dl>
+
+</dd></dl>
+
+<div class="toctree-wrapper compound">
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Philipp Pelcz.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
